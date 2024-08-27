@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'myFont';
+    /* The name you will use to reference the font */
+    src: url('../fonts/camingocode/CamingoCode-Regular.ttf');
+
+}
+
+main {
+    display: flex;
+    /* Enable flexbox for horizontal centering */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'myFont', sans-serif;
+
+}
+
+a, a:visited, a:active {
+    color: black;
+  }
+  
+  a:hover{
+    color: lightgray;
+  }
+  
+  
+  .buttons{
+    font-family: 'myFont';
+    background-color: white;
+    margin-top: 10px;
+    border-width: thin;
+  }
+  .buttons:active{
+    background-color: lightgray;
+  }
+
+header {
+    display: flex;
+    grid-column: 1;
+
+}
+
+#mainHeader {
+    text-align: center;
+    /* margin: 10px; */
+    flex: 1;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+    position: relative;
+    /* Allows absolute positioning */
+    left: 50%;
+    /* Moves the element 50% from the left of its container */
+    transform: translateX(-50%);
+    padding: 10px;
+
+}
+
+h1 {
+
+    margin: 0;
+}
+
+#scoreBar {
+
+    display: flex;
+    justify-content: space-between;
+    /* Places the headers at the ends of the container */
+    position: fixed;
+    right: 20px;
+
+}
+
+#currentScore {
+
+    margin-left: 5px;
+}
+
+#rounds {
+    position: fixed;
+    left: 20px;
+}
+
+#gameContainer {
+    /* flex: content; */
+    /* border-style: solid; */
+    /* position: fixed; */
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.799);
+    /* border-width: thin; */
+    align-content: center;
+    text-align: center;
+    margin: 20px;
+    padding-top: 10px;
+
+    /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  */
+
+}
+
+
+footer {
+
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: black;
+    border-top: 1px solid black;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    flex-shrink: 0;
+
+}
+
+#inputNumber {
+    width: 60px;
+}
+#inputField{
+    width:180px;
+
+}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden */
+    position: fixed; 
+    z-index: 1; 
+    align-content: center;
+    width: 300px; 
+    height: 600px; 
+    overflow: auto; /* Enable scroll if needed */
+
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #addHighScoreModal{
+    width: 300px;
+  }
+
+
+/* ------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 468px) {
+    #mainHeader {
+        font-size: 40px;
+    }
+}
+/* ------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+
+
+    main {
+        /* grid-column: 2; */
+        background-color: rgba(255, 255, 255, 0.799);
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    body {
+        grid-template-columns: 1fr 3fr 1fr;
+
+    }
+
+
+    header {
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+    }
+
+    main {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+}

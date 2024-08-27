@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Frame</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css?rnd=12345" />
+
+</head>
+
+<body>
+    
+    <header>
+        <h4 id="rounds"></h4>
+        <h1 id="mainHeader">Game Frame</h1>
+        <div id="scoreBar">
+            <h4>Score: </h4>
+            <h4 id="currentScore"></h4>
+        </div>
+    </header>
+
+
+    <main>
+
+
+
+
+        <div id="gameContainer">
+            <h2 id="gameHeader">Random Frenzy</h2>
+            <h4 id="random">...</h4>
+            <form id="gameForm">
+                <!-- <input id="inputNumber" placeholder="Number" required> -->
+                <input id="inputNumber" type="number" placeholder="1 to 5" min="1" max="5" required>
+
+                <button class="buttons" type="submit" id="playBtn">GO!</button>
+            </form>
+            <h4 id="result">...</h4>
+
+        </div>
+
+        <!-- pop up form for high score registration. JS and CSS dependent -->
+        <div id="addHighScoreModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h4>Register high score</h4>
+                <form id="addHighScoreForm">
+                    <label for="name">Name:</label><br>
+                    <input class="inputField" type="text" id="name" name="name" required><br>
+
+                    <button class="buttons" type="submit">Add High score</button>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+
+    <footer>
+        <div id="highScoreContainer">
+            <h3>High Scores</h3>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+</body>
+
+</html>
